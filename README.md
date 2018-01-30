@@ -33,6 +33,13 @@ catch (Exception e) {
 
 ----
 
+
+## 主要类图
+
+![uml](http://ojh6r395f.bkt.clouddn.com/2018-01-30-uml.jpg)
+
+---
+
 ## 功能及实例教程（字符串类型表达式）
 
 ### 一 字符串类型表达式使用方法
@@ -197,9 +204,4 @@ public static Operand value(String expression, Map<String, String> params)
 |1| !、&&、\|\||
 
 
----
-
-## 主要类图
-
-![uml](http://ojh6r395f.bkt.clouddn.com/2018-01-30-uml.jpg)
 
