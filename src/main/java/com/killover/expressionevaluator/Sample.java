@@ -12,12 +12,12 @@ public class Sample {
 
 
     public static void sample1(){
-        String expression = "x/5 + e * 2 - c + 52.4/3";
+        String expression = "a/5 + b * (2 - c + 52.4/3)";
 
         //传入变量值
         Map<String, String> params = new TreeMap<>();
-        params.put("x", "6");
-        params.put("e", "3");
+        params.put("a", "6");
+        params.put("b", "3");
         params.put("c", "49");
 
         try{
