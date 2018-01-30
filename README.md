@@ -1,2 +1,2 @@
 # ExpressionEvaluator
-Java Expression Evaluator Libruary
+Java Expression Evaluator Library
