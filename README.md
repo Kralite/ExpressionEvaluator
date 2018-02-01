@@ -92,7 +92,7 @@ public static Operand value(String expression, Map<String, String> params)
 ```
     "free" + x + "_" + (2.1 + 1) == "freeaccount_3.1"
         
-    {x: "account"} //告警
+    {x: "account"} //true
 ```
 
 - 支持与 `&&` 、或 `||` 、非 `!` 逻辑运算。
@@ -100,8 +100,8 @@ public static Operand value(String expression, Map<String, String> params)
 ```
     x == "freeshare" && ( e>0 || (!(c>0)))
         
-    {x:freeshare, e:2, c: 1 ...} //告警
-    {x:freelol, e:2, c:1 ...}    //不告警
+    {x:freeshare, e:2, c: 1 ...} //true
+    {x:freelol, e:2, c:1 ...}    //false
 ```
 > 1. 表达式中运算符和运算数之间对空格没有要求，没有空格或任意多个空格都不影响。
 > 2. params中可以有表达式中没有出现的变量，但是不能缺少表达式中出现了的变量。
@@ -115,9 +115,9 @@ public static Operand value(String expression, Map<String, String> params)
 ```
     x ~ regex("free\w+")
         
-    {x: freeshare ...}  //告警
-    {x: freelol ...}    //告警
-    {x: appstore ...}   //不告警
+    {x: freeshare ...}  //true
+    {x: freelol ...}    //true
+    {x: appstore ...}   //false
 
 
     (x + "@" + e + ".com") ~ regex("\w+@\w+\.com") && c>0
